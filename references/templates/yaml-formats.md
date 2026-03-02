@@ -174,6 +174,7 @@ fact_check:
       workstreams: ["market", "gtm"]
       details: "Market expert uses €12B (DIY only), GTM expert uses €15B (includes professional)"
       resolution_needed: true
+      resolution_owner: "PL or Partner to message affected experts"
 ```
 
 ### After Deep Research

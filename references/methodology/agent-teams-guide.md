@@ -339,6 +339,7 @@ The Fact-Checker verifies data quality and documents meetings. Works after each 
   - Spot-check URLs (20-30% in Phase 2, 50%+ in Phase 3)
   - Cross-check for contradictions across experts
   - Flag high `model_estimate` ratios (>10%)
+  - **Flag contradictions, don't resolve them** - PL or Partner messages affected experts to resolve
 - **Meeting notes**: Capture discussions from SendMessage transcripts
   - Attend all internal meetings (3-4 meetings per engagement)
   - Document key discussions, decisions, action items, contradictions resolved
@@ -574,7 +575,7 @@ During meetings:
 3. Write structured YAML meeting notes (doesn't need to be polished - just capture key points)
 4. Output to process/meeting-phase2.yaml, process/meeting-phase3-start.yaml, process/meeting-phase3-mid.yaml, process/meeting-phase3-final.yaml
 
-**Partner reviews your fact-check reports** and decides if flagged issues undermine recommendations. You don't make strategic judgments - you verify data quality.
+**Partner reviews your fact-check reports** and decides if flagged issues undermine recommendations. Partner also reviews contradictions during meetings and directs experts to resolve them. You don't make strategic judgments or resolve contradictions - you flag data quality issues and document discussions.
 
 **Output format:** Use the fact-check YAML format and meeting notes YAML format from references/templates/yaml-formats.md.
 ```

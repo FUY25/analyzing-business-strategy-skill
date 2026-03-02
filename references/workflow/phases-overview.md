@@ -431,7 +431,7 @@ Iterate within Phase 3 until satisfied, then proceed to Phase 4.
    - Cross-check numbers across experts for discrepancies
    - Write fact-check report to `process/fact-check-<workstream>-deep.yaml`
    - **Check depth:** Medium-to-heavy (more thorough since this goes to user)
-5. **Cross-workstream contradiction check (MANDATORY).** Before proceeding, compare findings across all experts. If Expert A's finding contradicts Expert B's assumption — e.g., cost expert says "15-25% advantage" but channel expert's model assumes "30% advantage" — this is not a footnote. The downstream conclusions are built on a false premise. Resolve it: spawn a follow-up agent, have the PL reconcile directly, or re-dispatch the affected expert with corrected assumptions. Update both workstream YAMLs with the resolution.
+5. **Cross-workstream contradiction check (MANDATORY).** Fact-Checker flags contradictions in their reports. If Expert A's finding contradicts Expert B's assumption — e.g., cost expert says "15-25% advantage" but channel expert's model assumes "30% advantage" — this is not a footnote. The downstream conclusions are built on a false premise. **Resolution:** PL or Partner messages the affected expert agents to resolve the contradiction. Experts update their workstream YAMLs with the resolution. Partner reviews these contradictions during meetings.
 6. Verify files exist: `ls process/deep-*.yaml` and `ls process/fact-check-*-deep.yaml`
 
 ### Pivot Check (MANDATORY after each round)

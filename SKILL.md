@@ -287,10 +287,10 @@ Engagement Progress:
   - [ ] 3.1 Based on user feedback, deploy targeted agents for deep validation
   - [ ] 3.2 Experts execute deep validation (internally iterative: validate → gaps → research deeper)
   - [ ] 3.2.1 ⚠️ After EACH expert completes: Fact-Checker verifies data quality → process/fact-check-<workstream>-deep.yaml
-  - [ ] 3.3 Verify all experts wrote YAML files: `ls process/deep-*.yaml`
-  - [ ] 3.3.1 ⚠️ VERIFY: Expected files: one deep-<workstream>.yaml per expert
-  - [ ] 3.3.2 ⚠️ VERIFY: Fact-Checker created one fact-check-<workstream>-deep.yaml per expert
-  - [ ] 3.4 Cross-workstream contradiction check (MANDATORY)
+  - [ ] 3.3 Cross-workstream contradiction check: Fact-Checker flags contradictions, PL/Partner directs experts to resolve
+  - [ ] 3.4 Verify all experts wrote YAML files: `ls process/deep-*.yaml`
+  - [ ] 3.4.1 ⚠️ VERIFY: Expected files: one deep-<workstream>.yaml per expert
+  - [ ] 3.4.2 ⚠️ VERIFY: Fact-Checker created one fact-check-<workstream>-deep.yaml per expert
   - [ ] 3.5 ⚠️ MANDATORY MEETING: Mid-Phase 3 sync (all experts + PL + Fact-Checker, Partner optional)
   - [ ] 3.5.1 Partner facilitates if present, Fact-Checker takes notes
   - [ ] 3.5.2 Write meeting notes → process/meeting-phase3-mid.yaml

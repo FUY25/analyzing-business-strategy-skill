@@ -325,29 +325,29 @@ Engagement Progress:
 - **Use `AskUserQuestion` tool** for format and length questions (unless flags already set). This creates a selection UI in Claude Code.
 - **You MUST ask output format** before scope checkpoint (unless `--format` set). Do not assume markdown. Do not decide the format on the user's behalf.
 
-  Use `AskUserQuestion` with these options:
+  Use `AskUserQuestion` with EXACTLY these options (do not add, remove, or modify):
   ```
   Question: "What format would you like the final deliverable in?"
   Header: "Output format"
   Options:
-  1. Markdown report (.md) — Detailed, editable, easy to share
-  2. HTML slides — Visual, presentable to stakeholders
-  3. PowerPoint (.pptx) — Traditional slide deck
-  4. Word document (.docx) — Formal report format
-  5. Notion page — Collaborative, team-editable
+  1. label: "Markdown report (.md)", description: "Detailed, editable, easy to share"
+  2. label: "HTML slides", description: "Visual, presentable to stakeholders"
+  3. label: "PowerPoint (.pptx)", description: "Traditional slide deck"
+  4. label: "Word document (.docx)", description: "Formal report format"
+  5. label: "Notion page", description: "Collaborative, team-editable"
   ```
 
 - **You MUST ask report length** before scope checkpoint (unless `--length` set). Do not default to "standard" without asking.
 
-  Use `AskUserQuestion` with these options:
+  Use `AskUserQuestion` with EXACTLY these options (do not add, remove, or modify):
   ```
   Question: "How much content should the analysis cover?"
   Header: "Content depth"
   Options:
-  1. 3min — Focused analysis (1-2 key questions, quick decisions)
-  2. 5min — Standard analysis (3-4 key questions, typical strategy work) (Recommended)
-  3. 10min — Comprehensive analysis (4-5 key questions, detailed evidence)
-  4. 10min+ — Extensive analysis (6-7 key questions, full strategic review)
+  1. label: "3min — Focused", description: "Quick assessment, focused scope (2-3 experts, 5-8 slides / 800-1200 words)"
+  2. label: "5min — Standard (Recommended)", description: "Typical strategy work, balanced coverage (3-4 experts, 10-15 slides / 2000-2500 words)"
+  3. label: "10min — Comprehensive", description: "Detailed evidence and benchmarking (4-5 experts, 20-25 slides / 4000-5000 words)"
+  4. label: "10min+ — Extensive", description: "Full strategic review with deep analysis (5-6 experts, 30+ slides / 6000+ words)"
   ```
 
 - Ask about internal data, proprietary research, or specific datasets (can use plain text or `AskUserQuestion`)

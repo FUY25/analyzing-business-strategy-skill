@@ -1,0 +1,72 @@
+# Backup files
+*.backup
+*.bak
+*.old
+SKILL.md.backup
+SKILL.md.new
+SKILL.md.old
+
+# Backup directories (timestamped backups)
+*-backup-*/
+business-expert-backup-*/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Thumbnails
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Process files (generated during engagements - optional, depends on if you want to track examples)
+# Uncomment if you don't want to track example process files:
+# process/
+# *-workspace/
+
+# Evaluation results (optional - uncomment if you don't want to track)
+# evals/results/
+# evals/benchmarks/
+
+# Node modules (if any JavaScript tooling is added)
+node_modules/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS generated files
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini

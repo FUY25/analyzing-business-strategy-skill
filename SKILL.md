@@ -264,56 +264,37 @@ Engagement Progress:
   - [ ] 2.4 Spawn Business Experts with mode="plan"
   - [ ] 2.5 Review and approve expert research plans
   - [ ] 2.6 Experts execute preliminary research (internally iterative: research → insights → refine)
-  - [ ] 2.6.1 ⚠️ After EACH expert completes: Fact-Checker verifies data quality → process/fact-check-<workstream>-preliminary.yaml
-  - [ ] 2.7 Build MECE issue tree → process/issue-tree.yaml (internal: hypotheses, user-facing: key questions)
-  - [ ] 2.7.1 ⚠️ VERIFY: Run `ls process/issue-tree.yaml` - if missing, create it now before proceeding
-  - [ ] 2.8 Verify all experts wrote YAML files: `ls process/preliminary-*.yaml`
-  - [ ] 2.8.1 ⚠️ VERIFY: Expected files: issue-tree.yaml + one preliminary-<workstream>.yaml per expert
-  - [ ] 2.8.2 ⚠️ VERIFY: Fact-Checker created one fact-check-<workstream>-preliminary.yaml per expert
-  - [ ] 2.9 PL writes cross-workstream synthesis → process/pl-synthesis-phase2.yaml
-  - [ ] 2.9.1 ⚠️ VERIFY: Run `ls process/pl-synthesis-phase2.yaml` - if missing, create it now
-  - [ ] 2.10 ⚠️ MANDATORY MEETING: Internal meeting before user checkpoint (all experts + PL + Partner + Fact-Checker)
-  - [ ] 2.10.1 Partner facilitates discussion, Fact-Checker takes notes
-  - [ ] 2.10.2 Write meeting notes → process/meeting-phase2.yaml
-  - [ ] 2.10.3 ⚠️ VERIFY: Run `ls process/meeting-phase2.yaml` - if missing, meeting didn't happen
+  - [ ] 2.7 After all experts complete: Fact-Checker verifies data quality → process/fact-check-phase2.yaml
+  - [ ] 2.8 Build MECE issue tree → process/issue-tree.yaml (internal: hypotheses, user-facing: key questions)
+  - [ ] 2.9 Verify all experts wrote YAML files: `ls process/preliminary-*.yaml`
+  - [ ] 2.10 MANDATORY MEETING: Internal meeting before user checkpoint (all experts + PL + Partner + Fact-Checker)
+  - [ ] 2.10.1 Partner facilitates discussion, Fact-Checker takes notes → process/meeting-phase2.yaml
   - [ ] 2.11 READ references/partner-guide.md before Partner review
   - [ ] 2.12 Partner formal review → process/partner-review-phase2.yaml (strategic framing focus)
-  - [ ] 2.12.1 ⚠️ VERIFY: Run `ls process/partner-review-phase2.yaml` - if missing, Partner didn't complete review
   - [ ] 2.13 ★ PRELIMINARY FINDINGS CHECKPOINT (mandatory) — present findings + issue tree to user
 - [ ] Phase 3: Deep Problem Solving (internally iterative)
-  - [ ] 3.0 ⚠️ CONDITIONAL MEETING: If user gave major change request between Phase 2 and Phase 3
+  - [ ] 3.0 Optional meeting: If user gave major change request between Phase 2 and Phase 3
         → Hold meeting at start of Phase 3 (all experts + PL + Partner + Fact-Checker)
         → Partner facilitates, Fact-Checker takes notes → process/meeting-phase3-start.yaml
   - [ ] 3.1 Based on user feedback, deploy targeted agents for deep validation
   - [ ] 3.2 Experts execute deep validation (internally iterative: validate → gaps → research deeper)
-  - [ ] 3.2.1 ⚠️ After EACH expert completes: Fact-Checker verifies data quality → process/fact-check-<workstream>-deep.yaml
-  - [ ] 3.3 Cross-workstream contradiction check: Fact-Checker flags contradictions, PL/Partner directs experts to resolve
-  - [ ] 3.4 Verify all experts wrote YAML files: `ls process/deep-*.yaml`
-  - [ ] 3.4.1 ⚠️ VERIFY: Expected files: one deep-<workstream>.yaml per expert
-  - [ ] 3.4.2 ⚠️ VERIFY: Fact-Checker created one fact-check-<workstream>-deep.yaml per expert
-  - [ ] 3.5 ⚠️ MANDATORY MEETING: Mid-Phase 3 sync (all experts + PL + Fact-Checker, Partner optional)
-  - [ ] 3.5.1 Partner facilitates if present, Fact-Checker takes notes
-  - [ ] 3.5.2 Write meeting notes → process/meeting-phase3-mid.yaml
-  - [ ] 3.5.3 ⚠️ VERIFY: Run `ls process/meeting-phase3-mid.yaml` - if missing, meeting didn't happen
+  - [ ] 3.3 After all experts complete: Fact-Checker verifies data quality → process/fact-check-phase3.yaml
+  - [ ] 3.4 Cross-workstream contradiction check: Fact-Checker flags contradictions, PL/Partner directs experts to resolve
+  - [ ] 3.5 Verify all experts wrote YAML files: `ls process/deep-*.yaml`
   - [ ] 3.6 ★ PIVOT CHECK — does this change the issue tree?
         → YES: update issue-tree.yaml, spawn new workstreams, iterate within Phase 3
         → NO: proceed
-  - [ ] 3.7 PL writes cross-workstream synthesis → process/pl-synthesis-phase3.yaml
-  - [ ] 3.7.1 ⚠️ VERIFY: Run `ls process/pl-synthesis-phase3.yaml` - if missing, create it now
-  - [ ] 3.8 ⚠️ MANDATORY MEETING: Final synthesis (all experts + PL + Partner + Fact-Checker)
-  - [ ] 3.8.1 Partner facilitates discussion, Fact-Checker takes notes
-  - [ ] 3.8.2 Write meeting notes → process/meeting-phase3-final.yaml
-  - [ ] 3.8.3 ⚠️ VERIFY: Run `ls process/meeting-phase3-final.yaml` - if missing, meeting didn't happen
-  - [ ] 3.9 READ references/partner-guide.md before Partner review
-  - [ ] 3.10 Partner review → process/partner-review-validation.yaml (evidence quality focus)
-  - [ ] 3.10.1 ⚠️ VERIFY: Run `ls process/partner-review-validation.yaml` - if missing, Partner didn't complete review
+  - [ ] 3.7 MANDATORY MEETING: Final synthesis (all experts + PL + Partner + Fact-Checker)
+  - [ ] 3.7.1 Partner facilitates discussion, Fact-Checker takes notes → process/meeting-phase3-final.yaml
+  - [ ] 3.8 READ references/partner-guide.md before Partner review
+  - [ ] 3.9 Partner review → process/partner-review-validation.yaml (evidence quality focus)
         → Partner can trigger restructure → loop to Phase 2
-  - [ ] 3.11 Working checkpoints (optional) — share findings when meaningful
+  - [ ] 3.10 Working checkpoints (optional) — share findings when meaningful
   - Loop-back count: 0
 - [ ] Phase 4: Final Checkpoint ⚠️ REQUIRED
   - [ ] 4.1 READ references/partner-guide.md before final review
   - [ ] 4.2 Partner final review → process/partner-review-final.yaml
-  - [ ] 4.3 Present storyline outline + evidence map
+  - [ ] 4.3 Present deliverable structure and direction to user
   - [ ] 4.4 ★ USER SIGN-OFF — must approve before deliverable
 - [ ] Phase 5: Deliverable Creation (iterative review loop)
   - [ ] 5.1 READ references/bcg-patterns.md for structural patterns
@@ -413,16 +394,33 @@ Engagement Progress:
 
 ### Phase 4: Final Checkpoint ⚠️ REQUIRED
 
-Present evidence map as ASCII tree:
+Present deliverable structure and direction to user:
+
+**Deliverable structure:**
+- Section outline (what sections will be covered)
+- Narrative arc (how sections connect)
+- Key direction (what will be recommended)
+- Evidence strength assessment (where evidence is strong vs weak)
+
+**Example:**
 ```
-Recommendation: Go via Amazon DTC, phased launch
-├── Storyline 1: Market is attractive
-│   ├── [HIGH] EU decorative paint €12B, 3.2% CAGR ← Euromonitor 2025
-│   └── [GAP]  US specialty segment size — no reliable source
-├── Storyline 2: Cost advantage holds
-│   └── [HIGH] 38% cost gap survives tariffs ← customs data + model
-└── Storyline 3: Amazon DTC feasible under $500K
-    └── [HIGH] Launch cost ~$180K ← 3 comparable case studies
+Final Checkpoint (Phase 4 of 6)
+
+Deliverable structure:
+1. Executive Summary - Key recommendation and rationale
+2. Market Viability - EU decorative paint market, eco segment opportunity
+3. Cost Advantage Analysis - Tariff/shipping impact, competitive positioning
+4. Channel Strategy - Amazon DTC feasibility, launch economics
+5. Recommendations - Phased approach with timeline
+6. Risks & Mitigations
+
+Direction: The deliverable will recommend Amazon DTC launch with phased approach,
+based on strong market evidence and validated cost advantage.
+
+Evidence strength: Strong on market size and cost structure, moderate on channel
+economics (limited comparable data)
+
+Ready to proceed with building this?
 ```
 
 **★ USER SIGN-OFF required before deliverable.** Use `AskUserQuestion`:
@@ -615,10 +613,11 @@ All work saved to `process/` for traceability and resumability:
 ├── process/
 │   ├── engagement-state.yaml      # Phase tracking, resumability
 │   ├── issue-tree.yaml            # Living issue tree (versioned)
-│   ├── workstream-*.yaml          # Business Expert findings
+│   ├── preliminary-*.yaml         # Phase 2: Business Expert findings
+│   ├── deep-*.yaml                # Phase 3: Business Expert findings
 │   ├── partner-review-*.yaml      # Partner reviews
 │   ├── fact-check-phase*.yaml     # Fact-check results
-│   └── validation-*.yaml          # Hypothesis validation
+│   └── meeting-*.yaml             # Meeting notes
 └── next-steps/
     ├── interview-guide-*.md       # Ready-to-use interview guides
     ├── survey-*.md                # Customer survey drafts
@@ -628,7 +627,7 @@ All work saved to `process/` for traceability and resumability:
 
 **YAML formats: `references/templates/yaml-formats.md`**
 
-**Process files are not optional.** Every agent — Business Expert, Partner, and PL — must write YAML files to `process/` as specified. If a phase completes without its expected files, something went wrong. The `process/` directory is the engagement's source of truth — without it, there's no audit trail, no resumability, and no way for the Partner to review structured findings.
+**Process files are not optional.** Every agent — Business Expert, Partner, and Fact-Checker — must write YAML files to `process/` as specified. If a phase completes without its expected files, something went wrong. The `process/` directory is the engagement's source of truth — without it, there's no auditl, no resumability, and no way for the Partner to review structured findings.
 
 ---
 

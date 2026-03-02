@@ -133,28 +133,30 @@ sources:
 
 ## Fact-Check Results (Fact-Checker Agent)
 
-**Fact-Checker creates TWO files per workstream - one for each phase:**
+**Fact-Checker creates ONE file per phase (batch mode):**
 
 ### After Preliminary Research
 
-File: `process/fact-check-<workstream>-preliminary.yaml`
+File: `process/fact-check-phase2.yaml`
 
 ```yaml
 fact_check:
-  workstream: "<workstream name>"
   phase: "preliminary"
   timestamp: "<ISO 8601>"
+  workstreams_checked: ["market", "competitive", "gtm"]
   checked_data_points: <number>
   check_depth: "light-to-medium"
   results:
-    - metric: "EU decorative paint market size"
+    - workstream: "market"
+      metric: "EU decorative paint market size"
       claimed_value: "€12B"
       claimed_source: "Euromonitor 2025"
       source_url: "https://..."
       verification: verified|downgraded|upgraded|discrepancy
       actual_value: "€11.8B"
       notes: "Close enough — rounding difference"
-    - metric: "Specialty segment CAGR"
+    - workstream: "competitive"
+      metric: "Specialty segment CAGR"
       claimed_value: "6.2%"
       claimed_source: "model knowledge"
       source_url: ""
@@ -166,7 +168,10 @@ fact_check:
     downgraded_count: 1
     upgraded_count: 1
     discrepancy_count: 1
-    model_estimate_ratio: 0.08
+    model_estimate_ratio_by_expert:
+      market: 0.08
+      competitive: 0.12
+      gtm: 0.05
     risk_flags:
       - "Shipping cost estimate ($8.50/unit) is model_estimate and critical to margin calculation"
   cross_check_findings:
@@ -179,9 +184,10 @@ fact_check:
 
 ### After Deep Research
 
-File: `process/fact-check-<workstream>-deep.yaml`
+File: `process/fact-check-phase3.yaml`
 
 Same format as preliminary, but with:
+- `phase: "deep"`
 - `check_depth: "medium-to-heavy"`
 - More thorough URL verification (50%+ spot-checked)
 - More cross-checking across workstreams
@@ -229,7 +235,7 @@ meeting:
     - change: "None - issue tree approved as-is"
 ```
 
-### Phase 3 Start Meeting (Conditional)
+### Phase 3 Start Meeting (Optional)
 
 File: `process/meeting-phase3-start.yaml` (only created if user gives major change request)
 
@@ -259,41 +265,6 @@ meeting:
 
   issue_tree_updates:
     - change: "<what changed in issue tree>"
-```
-
-### Phase 3 Mid Meeting
-
-File: `process/meeting-phase3-mid.yaml`
-
-```yaml
-meeting:
-  phase: 3
-  timing: "mid"
-  purpose: "Share validation progress, identify gaps"
-  attendees: ["expert-market", "expert-competitive", "expert-gtm", "pl", "partner", "fact-checker"]
-  timestamp: "<ISO 8601>"
-
-  key_discussions:
-    - topic: "<discussion topic>"
-      summary: "<summary>"
-
-  decisions:
-    - "<decisions made>"
-
-  action_items:
-    - agent: "<agent>"
-      action: "<action>"
-
-  validation_status:
-    hypotheses_proven: ["H1", "H3"]
-    hypotheses_refuted: ["H6"]
-    hypotheses_pending: ["H2", "H4"]
-
-  gaps_identified:
-    - "<what gaps remain>"
-
-  next_steps:
-    - "<what happens next>"
 ```
 
 ### Phase 3 Final Meeting
@@ -328,83 +299,6 @@ meeting:
   storyline_coherence:
     assessment: "coherent|needs-work"
     notes: "<partner's assessment>"
-```
-
----
-
-## PL Synthesis (Project Lead)
-
-File: `process/pl-synthesis-phase2.yaml`
-
-```yaml
-synthesis:
-  phase: 2
-  timestamp: "<ISO 8601>"
-
-  key_insights:
-    - insight: "<cross-workstream insight>"
-      supporting_workstreams: ["market", "competitive"]
-      confidence: high|medium|low
-
-  contradictions_resolved:
-    - issue: "<what contradicted>"
-      workstreams: ["market", "gtm"]
-      resolution: "<how resolved>"
-
-  storyline_emerging:
-    - storyline: "<narrative thread>"
-      evidence: ["<finding 1>", "<finding 2>"]
-      strength: strong|moderate|weak
-
-  gaps_identified:
-    - gap: "<what's missing>"
-      impact: high|medium|low
-      plan: "<how to address in Phase 3>"
-
-  hypotheses_formed:
-    - hypothesis: "H1"
-      statement: "<hypothesis statement>"
-      confidence: "<preliminary confidence level>"
-      validation_plan: "<what to test in Phase 3>"
-```
-
-File: `process/pl-synthesis-phase3.yaml`
-
-```yaml
-synthesis:
-  phase: 3
-  timestamp: "<ISO 8601>"
-
-  key_insights:
-    - insight: "<cross-workstream insight>"
-      supporting_workstreams: ["market", "competitive", "gtm"]
-      confidence: high|medium|low
-
-  contradictions_resolved:
-    - issue: "<what contradicted>"
-      workstreams: ["market", "gtm"]
-      resolution: "<how resolved>"
-
-  storyline_emerging:
-    - storyline: "<narrative thread>"
-      evidence: ["<finding 1>", "<finding 2>"]
-      strength: strong|moderate|weak
-
-  gaps_identified:
-    - gap: "<what's missing>"
-      impact: high|medium|low
-      plan: "<how to address - or note if unresolvable>"
-
-  hypotheses_validated:
-    - hypothesis: "H1"
-      statement: "<hypothesis statement>"
-      status: supported|refuted|revised
-      evidence_strength: strong|moderate|weak
-
-  recommendations_emerging:
-    - recommendation: "<what to recommend>"
-      confidence: high|medium|low
-      dependencies: ["<what needs to be true>"]
 ```
 
 ---

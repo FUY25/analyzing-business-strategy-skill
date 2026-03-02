@@ -322,7 +322,8 @@ Engagement Progress:
 
 ### Phase 1: Scope & Clarification ⚠️ REQUIRED
 
-- **Use `AskUserQuestion` tool** for format and length questions (unless flags already set). This creates a selection UI in Claude Code.
+- **Use `AskUserQuestion` tool frequently** for any question with discrete choices. This creates a selection UI in Claude Code and improves user experience. Only use plain text for open-ended questions (e.g., "Tell me about your product").
+
 - **You MUST ask output format** before scope checkpoint (unless `--format` set). Do not assume markdown. Do not decide the format on the user's behalf.
 
   Use `AskUserQuestion` with EXACTLY these options (do not add, remove, or modify):
@@ -347,10 +348,19 @@ Engagement Progress:
   1. label: "3min — Focused", description: "Quick assessment, focused scope (2-3 experts, 5-8 slides / 800-1200 words)"
   2. label: "5min — Standard (Recommended)", description: "Typical strategy work, balanced coverage (3-4 experts, 10-15 slides / 2000-2500 words)"
   3. label: "10min — Comprehensive", description: "Detailed evidence and benchmarking (4-5 experts, 20-25 slides / 4000-5000 words)"
-  4. label: "10min+ — Extensive", description: "Full strategic review with deep analysis (5-6 experts, 30+ slides / 6000+ words)"
+  4. label: "10minensive", description: "Full strategic review with deep analysis (5-6 experts, 30+ slides / 6000+ words)"
   ```
 
-- Ask about internal data, proprietary research, or specific datasets (can use plain text or `AskUserQuestion`)
+- **Use `AskUserQuestion` for follow-up clarifications** when they involve choices. Examples:
+  - Budget ranges: "<$500K", "$500K-$2M", "$2M+", "Not yet determined"
+  - Timeline: "3-6 months", "6-12 months", "12-18 months", "Exploratory (no fixed timeline)"
+  - Target customer segments: "DIY homeowners", "Professional painters", "Eco-conscious consumers", "Commercial/institutional", "Multiple segments"
+  - Audience: "Board/investors", "Operations team", "Marketing team", "Internal decision-making", "Multiple stakeholders"
+  - Geographic focus: "UK", "Germany", "France", "Multiple EU countries", "US East Coast", "US West Coast", "US nationwide", "Both EU and US equally"
+
+  **When to use plain text instead:** Open-ended questions like "What's your competitive advantage?", "What are your biggest concerns?", "Tell me about your product."
+
+- Ask about internal data, proprietary research, or specific datasets (use `AskUserQuestion` if asking about availability with yes/no/partial options)
 - Ask about the user's background and what they care about — this shapes the analysis
 - **★ SCOPE CHECKPOINT:** User confirms problem statement, scope, format. Do not proceed without this. Before presenting, verify you have explicitly asked about output format.
 

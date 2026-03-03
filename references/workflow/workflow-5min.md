@@ -100,7 +100,7 @@ For 5min engagements, do NOT spawn any teammates in Phase 0. Partner and Deliver
 
 ## Phase 1: Scope & Clarification ⚠️ REQUIRED
 
-See `phases-overview.md` for complete Phase 1 instructions (same across all tiers).
+See `phases-overview.md` for complete Phase 1 instructions (same across all tiers). 
 
 ---
 

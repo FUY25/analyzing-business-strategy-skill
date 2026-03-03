@@ -9,12 +9,12 @@ This workflow is optimized for focused, time-sensitive analysis with 1-2 key que
 **Team:**
 - PL (you)
 - 2 Business Experts (subagents, no team_name)
-- Partner (teammate, on-demand in Phase 3)
+- Partner 
 
 **Process:**
-- Phase 0: No team spawn (Partner spawned on-demand in Phase 3)
+- Phase 0: Spawn Partner spawned 
 - Phase 2: Research → PL reviews → User checkpoint
-- Phase 3: Deep dive → Partner review (spawned on-demand, reads YAMLs, gives feedback) → Deliverable
+- Phase 3: Deep dive → Partner review  → Deliverable
 - No meetings, no Fact-Checker, no Deliverable Advisor
 - PL does fact-checking inline
 - PL builds deliverable (respects user's format choice)
@@ -88,9 +88,8 @@ When dispatching subagents, use `model: "opus"` for Business Experts that need d
 
 After Phase 1 (post-scope), make a SPECIFIC MCP recommendation based on the problem domain. Point to `references/workflow/setup-guide.md`.
 
-### No Team Spawn in Phase 0
+###  Spawn Partner in Phase 0
 
-For 3min engagements, do NOT spawn any teammates in Phase 0. Partner will be spawned on-demand in Phase 3 only.
 
 ---
 
@@ -189,10 +188,10 @@ Agent(
 
 Each expert owns one branch of the issue tree.
 
-### Every Agent Must Write YAML
+### Every Agent Must Write YAML (or .md if YAML writing fails)
 
 Include in every agent prompt:
-> "Before you return, write your findings to `process/preliminary-<workstream-name>.yaml` using the format in `references/templates/yaml-formats.md`."
+> "Before you return, write your findings to `process/preliminary-<workstream-name>.yaml` (or `.md` if YAML fails) using the format in `references/templates/yaml-formats.md`."
 
 After agents return: `ls process/preliminary-*.yaml` — re-dispatch any agent that didn't write its file.
 

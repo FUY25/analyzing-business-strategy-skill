@@ -56,10 +56,10 @@ The most important phase. Misaligned scope wastes everything downstream.
 **You MUST ask the user about report length before presenting the scope checkpoint.** This is separate from the format question. Use this phrasing:
 
   > "How much content should the final deliverable cover?"
-  > 1. Focused analysis (~5-8 slides / ~1000 words) — 1-2 key questions, for quick decisions
-  > 2. Standard analysis (~10-15 slides / ~2500 words) — 3-4 key questions, typical strategy work
-  > 3. Comprehensive analysis (~20-25 slides / ~4500 words) — 4-5 key questions, detailed evidence and benchmarking
-  > 4. Extensive analysis (~30+ slides / ~6000+ words) — 6-7 key questions, full strategic review
+  > 1. Focused analysis (~5-8 slides / ~1000 words) — 1-2 workstreams, for quick decisions
+  > 2. Standard analysis (~10-15 slides / ~2500 words) — 3-4 workstreams, typical strategy work
+  > 3. Comprehensive analysis (~20-25 slides / ~4500 words) — 4-5 workstreams, detailed evidence and benchmarking, expensive
+  > 4. Extensive analysis (~30+ slides / ~6000+ words) — 6-7 workstreams, full strategic review, very expensive
 
   Only skip this question if `--length` was explicitly set in the arguments. Do not default to "standard" without asking.
 

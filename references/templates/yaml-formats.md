@@ -1,6 +1,11 @@
 # YAML Templates for Process Files
 
-All agents must write structured YAML files to `process/`. Use these exact formats.
+All agents must write structured YAML files (or .md files if YAML fails) to `process/`. Use these exact formats.
+
+**Resilience: If YAML write fails, use .md instead:**
+- If writing to `process/*.yaml` fails → write to `process/*.md` instead
+- Markdown format is acceptable for all process files
+- Keep the same structured format, just use markdown syntax instead of YAML
 
 ---
 
@@ -133,6 +138,8 @@ sources:
 
 ## Fact-Check Results (Fact-Checker Agent)
 
+**Note: Fact-Checker only spawned for `--length 10min` and `10min+` engagements. For 3min and 5min, PL does inline fact-checking.**
+
 **Fact-Checker creates ONE file per phase (batch mode):**
 
 ### After Preliminary Research
@@ -212,6 +219,8 @@ Same format as preliminary, but with:
 ---
 
 ## Meeting Notes (Fact-Checker Agent)
+
+**Note: Meeting notes only created for `--length 10min` and `10min+` engagements. For 3min and 5min, no formal meeting notes are captured.**
 
 **Fact-Checker captures meeting notes from SendMessage transcript:**
 
@@ -322,11 +331,11 @@ meeting:
 
 ## Issue Tree
 
-**The issue tree is the single source of truth** for key questions, hypotheses, and progress state. **PL must keep it updated** throughout the engagement.
+**The issue tree is the single source of truth** for key questions, hypotheses, and progress state. **PL owns and must keep it updated** throughout the engagement. **All teammates refer to this file** to understand current strategic direction.
 
 **Created at start of Phase 2 (before deploying experts).** Each branch maps to a workstream.
 
-File: `process/issue-tree.yaml` (or `.md` if yaml fails)
+File: `process/issue-tree.yaml` (or `.md` if YAML fails)
 
 ```yaml
 core_question: "Should we launch B2C paint in EU/US?"
@@ -361,10 +370,12 @@ changelog:
 
 **PL responsibilities:**
 - Create initial issue tree at start of Phase 2 (before deploying experts)
+- **Own and maintain this file** - it's the internal tracking document everyone refers to
 - Each branch maps to a workstream (expert assignment)
 - Update hypothesis statuses as findings come in (pending → supported/refuted/revised)
 - Add/remove branches when pivot checks reveal changes needed
 - Increment version and log changes in changelog
+- **All teammates (Partner, Experts, Deliverable Advisor) look at this file** to understand current strategic direction
 - This file is the engagement's strategic backbone
 
 **Living document:** When validation adds, removes, or restructures branches:

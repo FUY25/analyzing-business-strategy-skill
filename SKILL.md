@@ -49,31 +49,31 @@ Parse `$ARGUMENTS` for these flags. Any flag provided skips the corresponding qu
 
 Longer length = more content covered, more insights delivered. Content density per topic remains constant.
 
-- `3min` — Focused analysis: 1-2 key questions
+- `3min` — Focused analysis: 1-2 key workstreams
   - Team: 2-3 Business Experts
   - Output: 5-8 slides / 800-1200 words
   - Example: "Should we enter via Amazon or retail?"
 
-- `5min` — Standard analysis: 3-4 key questions (default)
+- `5min` — Standard analysis: 3-4 key workstreams (default)
   - Team: 3-4 Business Experts
   - Output: 10-15 slides / 2000-2500 words
   - Example: "Should we enter EU market?" (market + cost + channel)
 
-- `10min` — Comprehensive analysis: 4-5 key questions
+- `10min` — Comprehensive analysis: 4-5 key workstreams 
   - Team: 4-5 Business Experts
   - Output: 20-25 slides / 4000-5000 words
   - Example: "Full market entry strategy" (market + cost + channel + positioning + risks)
 
-- `10min+` — Extensive analysis: 6-7 key questions
+- `10min+` — Extensive analysis: 6-7 key workstreams
   - Team: 5-6 Business Experts
   - Output: 30+ slides / 6000+ words
   - Example: "Complete growth strategy" (multiple markets, channels, products, org design)
 
 **Minimum output by `--length` (regardless of content):**
-- `3min`: 5-8 slides / 800-1200 words OR 60% of research volume, whichever is higher
-- `5min`: 10-15 slides / 2000-2500 words OR 60% of research volume, whichever is higher
-- `10min`: 20-25 slides / 4000-5000 words OR 60% of research volume, whichever is higher
-- `10min+`: 30+ slides / 6000+ words OR 60% of research volume, whichever is higher
+- `3min`: 5-8 slides / 800-1200 words OR 70% of research volume, whichever is higher
+- `5min`: 10-15 slides / 2000-2500 words OR 70% of research volume, whichever is higher
+- `10min`: 20-25 slides / 4000-5000 words OR 70% of research volume, whichever is higher
+- `10min+`: 30+ slides / 6000+ words OR 70% of research volume, whichever is higher
 
 *Note: Process YAML files collectively will often exceed 20K words of research — the deliverable should reflect that coverage, not compress it into a thin summary.*
 
@@ -94,7 +94,8 @@ Longer length = more content covered, more insights delivered. Content density p
 1. **MECE decomposition** — Break every problem into mutually exclusive, collectively exhaustive components.
 2. **Hypothesis-driven** — Form a point of view early, then seek data to prove or disprove it.
 3. **Pyramid principle** — Lead with the answer. Support with storylines. Back each storyline with evidence.
-4. **So-what test** — Every data point must answer "so what?" If it doesn't drive a recommendation, cut it.
+4. **So-what mindset** — Every arguments, insights, data point must answer "so what?" If it doesn't drive a recommendation, cut it.
+5. **Find the obvious and non obvious insights** - 
 
 **User engagement principle:** Use `AskUserQuestion` tool whenever asking the user questions with discrete choices throughout the engagement (Phase 1 scope, Phase 2 preliminary findings, Phase 3 working checkpoints, Phase 4 final sign-off, Phase 6 next steps). This creates a selection UI in Claude Code and improves user experience. Only use plain text for open-ended questions.
 
@@ -146,7 +147,6 @@ The team structure and process adapt based on engagement complexity:
   - Phase 3: Deep dive → Partner review (spawned on-demand, reads YAMLs) → Deliverable
   - No meetings, no Fact-Checker, no Deliverable Advisor
   - PL does fact-checking inline and builds deliverable (respects user's format choice)
-- Savings: 70-80K tokens (60% reduction)
 
 **`--length 5min` (Standard - DEFAULT):**
 - Team: PL + 3 Business Experts (teammates) + Partner (teammate, on-demand) + Deliverable Advisor (teammate, on-demand)
@@ -156,7 +156,6 @@ The team structure and process adapt based on engagement complexity:
   - 1 meeting only (Phase 3 final, includes Deliverable Advisor)
   - PL does fact-checking inline
   - Deliverable Advisor builds deliverable (respects user's format choice)
-- Savings: 40-50K tokens (30% reduction)
 
 **`--length 10min` and `10min+` (Comprehensive):**
 - Team: Full team (PL + 4-6 Business Experts + Partner + Fact-Checker + Deliverable Advisor, all teammates)

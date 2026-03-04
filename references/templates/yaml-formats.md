@@ -17,7 +17,7 @@ All agents must write structured YAML files (or .md files if YAML fails) to `pro
 - [Meeting Notes (Fact-Checker Agent)](#meeting-notes-fact-checker-agent) - Phase 2 and Phase 3 meeting documentation
 - [Issue Tree](#issue-tree) - Strategic question tracking and hypothesis validation
 - [Partner Review](#partner-review) - Quality gate assessment format
-- [Engagement State (Resumability)](#engagement-state-resumability) - Session state tracking for resume capability
+- [Engagement State (Phase Map & Resumability)](#engagement-state-phase-map--resumability) - PL-maintained phase map and session state tracking
 - [Next Steps Proposal](#next-steps-proposal) - Post-engagement action items
 
 ---
@@ -553,78 +553,109 @@ This sends the engagement back to Phase 2 for fundamental revision.
 
 ---
 
-## Engagement State (Resumability)
+## Engagement State (Phase Map & Resumability)
+
+**The engagement state is the phase map** that PL maintains to track progress through the 6-phase workflow. It enables resumability and provides a snapshot of engagement progress at any point.
+
+**PL updates this file after:**
+- Each phase completion
+- Each checkpoint (preliminary findings, final checkpoint)
+- User feedback received
+- Major state changes (team spawned, deliverable approved, etc.)
 
 File: `process/engagement-state.yaml`
 
 ```yaml
-engagement:
-  topic: "<user's original question>"
-  project_folder: "<path>"
-  created: "<ISO 8601>"
-  last_updated: "<ISO 8601>"
+# Core tracking
+current_phase: "Phase 1" | "Phase 2" | "Phase 3" | "Phase 4" | "Phase 5" | "Phase 6" | "Complete"
+last_updated: "<ISO 8601>"
 
-current_phase: 3
-phase_status:
-  phase_0: complete
-  phase_1: complete
-  phase_2: complete
-  phase_3: in_progress
-  phase_4: pending
-  phase_5: pending
-  phase_6: pending
+# Phase 0 - Team setup
+team_spawned: ["partner", "fact-checker", "deliverable-advisor"]  # List teammates spawned
 
-parameters:
-  format: slides
-  length: 10min
-  level: analyst
-  depth: standard
-  sources: balanced
-  lang: en
+# Phase 1 - Scope
+scope_confirmed: true
 
-hypotheses:
-  supported:
-    - H1: "Market growing >3% CAGR"
-    - H3: "Margins positive after tariffs"
-  refuted:
-    - H6: "Retail partnership viable under $500K"
-  pending:
-    - H2: "Specialty niches accessible"
+# Phase 2 - Preliminary research
+checkpoints_completed: ["preliminary_findings"]
+user_feedback: "<summary of user feedback from Phase 2 checkpoint>"
+phase2_meeting_complete: true  # 10min+ only
 
-data_gaps:
-  - "Partner B financials — private company"
-  - "Real freight quotes for Vietnam→UK route"
+# Phase 3 - Deep research
+deep_research_complete: true
+partner_review_complete: true
+fact_check_complete: true  # 10min+ only
+phase3_meeting_complete: true  # 5min and 10min+ only
 
-issue_tree_updates:
-  - version: 1
-    timestamp: "<ISO 8601>"
-    change: "Initial tree created before Phase 2 research"
-  - version: 2
-    timestamp: "<ISO 8601>"
-    change: "Added branch for positioning-channel coupling after Phase 2 findings"
+# Phase 4 - Final checkpoint
+deliverable_structure_approved: true
 
-findings_status:
-  preliminary_complete: true
-  deep_complete: false
-  fact_check_phase2_complete: true
-  fact_check_phase3_complete: false
-  partner_review_phase2: "approved"
-  partner_review_phase3: "pending"
+# Phase 5 - Deliverable creation
+deliverable_complete: true
+deliverable_files: ["<list of files created>"]
 
-checkpoints_completed:
-  - checkpoint: "phase1_scope"
-    timestamp: "<ISO 8601>"
-    user_feedback: "Approved, proceed with research"
-  - checkpoint: "phase2_preliminary"
-    timestamp: "<ISO 8601>"
-    user_feedback: "Good direction, focus more on cost analysis in Phase 3"
+# Phase 6 - Next steps
+engagement_complete: true
+next_steps_documented: true
+```
 
-loop_back_count: 1
-loop_back_history:
-  - from_phase: 3
-    to_phase: 2
-    reason: "Positioning analysis revealed channel-positioning coupling"
-    timestamp: "<ISO 8601>"
+**Example progression:**
+
+Phase 0 complete:
+```yaml
+current_phase: "Phase 1"
+last_updated: "2026-03-04T10:30:00Z"
+team_spawned: ["partner", "fact-checker", "deliverable-advisor"]
+```
+
+Phase 1 complete:
+```yaml
+current_phase: "Phase 2"
+last_updated: "2026-03-04T10:45:00Z"
+scope_confirmed: true
+```
+
+Phase 2 checkpoint complete:
+```yaml
+current_phase: "Phase 3"
+last_updated: "2026-03-04T11:30:00Z"
+checkpoints_completed: ["preliminary_findings"]
+user_feedback: "Good direction, focus more on cost analysis in Phase 3"
+phase2_meeting_complete: true
+```
+
+Phase 3 complete:
+```yaml
+current_phase: "Phase 4"
+last_updated: "2026-03-04T13:00:00Z"
+deep_research_complete: true
+partner_review_complete: true
+fact_check_complete: true
+phase3_meeting_complete: true
+```
+
+Phase 4 checkpoint complete:
+```yaml
+current_phase: "Phase 5"
+last_updated: "2026-03-04T13:15:00Z"
+checkpoints_completed: ["preliminary_findings", "final_checkpoint"]
+deliverable_structure_approved: true
+```
+
+Phase 5 complete:
+```yaml
+current_phase: "Phase 6"
+last_updated: "2026-03-04T14:30:00Z"
+deliverable_complete: true
+deliverable_files: ["Market_Entry_Strategy_EU_Paint_v1.md", "Market_Entry_Strategy_EU_Paint_v1.pptx"]
+```
+
+Phase 6 complete:
+```yaml
+current_phase: "Complete"
+last_updated: "2026-03-04T14:45:00Z"
+engagement_complete: true
+next_steps_documented: true
 ```
 
 ---

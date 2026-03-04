@@ -124,6 +124,7 @@ Quick summary: You are the PL (Project Lead). Your team includes Partner (qualit
 
 **PL Ownership:**
 - **Issue tree** (`process/issue-tree.yaml`) - You own and maintain this as the single source of truth. Everyone refers to this for current hypotheses, key questions, and progress state. Keep it updated throughout the engagement.
+- **Engagement state** (`process/engagement-state.yaml`) - You own and maintain this as the phase map and resumability tracker. Update it after each phase completion and checkpoint to track progress through the 6-phase workflow.
 - **.md deliverable** (Phase 5) - You write and own the main content deliverable
 - **Content approval** - You review and approve slide content before presenting to user
 

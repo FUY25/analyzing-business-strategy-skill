@@ -4,6 +4,19 @@ This workflow is optimized for focused, time-sensitive analysis with 1-2 key que
 
 ---
 
+## Contents
+
+- [Team Structure](#team-structure) - PL + 2 Business Experts (subagents) + Partner (teammate)
+- [Phase 0: Environment Check](#phase-0-environment-check--blocking) - Setup, permissions, spawn Partner
+- [Phase 1: Scope & Clarification](#phase-1-scope--clarification--required) - Define problem and parameters
+- [Phase 2: Landscape Research & Preliminary Findings](#phase-2-landscape-research--preliminary-findings) - Build issue tree, deploy experts, first checkpoint
+- [Phase 3: Deep Problem Solving](#phase-3-deep-problem-solving) - Validate hypotheses, Partner review
+- [Phase 4: Final Checkpoint](#phase-4-final-checkpoint--required) - Present deliverable structure for approval
+- [Phase 5: Deliverable Creation](#phase-5-deliverable-creation) - PL builds deliverable directly
+- [Phase 6: Next Steps & Resumability](#phase-6-next-steps--resumability) - Document next steps and save state
+
+---
+
 ## Team Structure
 
 **Team:**

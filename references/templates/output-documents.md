@@ -6,6 +6,25 @@
 
 ---
 
+## Contents
+
+- [Documents vs Slides: Key Difference](#documents-vs-slides-key-difference) - When to use documents vs slides
+- [Document Structure (Pyramid Principle)](#document-structure-pyramid-principle) - How to structure document content
+- [Recommendations](#recommendations) - How to present recommendations
+- [Content Density Standards](#content-density-standards) - How much detail to include
+- [Writing Style Standards](#writing-style-standards) - Professional, analytical, evidence-based
+- [Case Study Standards](#case-study-standards) - How to present case studies in documents
+- [Benchmarking Standards](#benchmarking-standards) - How to present benchmarks
+- [Format-Specific Guidance](#format-specific-guidance) - Markdown vs DOCX vs Notion
+- [Reading from YAML Files](#reading-from-yaml-files) - How to extract content from process files
+- [Quality Checklist (Pre-Delivery)](#quality-checklist-pre-delivery) - Final checks before delivery
+- [Common Mistakes to Avoid](#common-mistakes-to-avoid) - Pitfalls to watch for
+- [Deliverable Advisor Role](#deliverable-advisor-role) - Responsibilities and workflow
+- [BCG Patterns to Follow](#bcg-patterns-to-follow) - Consulting-style patterns
+- [Final Note](#final-note) - Closing guidance
+
+---
+
 ## Documents vs Slides: Key Difference
 
 **Documents = Linear narrative.** The reader progresses sequentially from beginning to end. Content flows continuously with section breaks, not discrete units. Depth and detail are expected.

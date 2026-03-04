@@ -4,6 +4,26 @@ This workflow is for environments where neither Agent Teams nor subagents are av
 
 ---
 
+## Contents
+
+- [When to Use This Workflow](#when-to-use-this-workflow) - Conditions for using single-agent mode
+- [Key Differences from Team Workflows](#key-differences-from-team-workflows) - What changes without agents
+- [Workflow Overview](#workflow-overview) - High-level process
+- [Phase 0: Environment Check](#phase-0-environment-check) - Setup and scope adjustment
+- [Phase 1: Scope & Clarification](#phase-1-scope--clarification) - Define problem and parameters
+- [Phase 2: Preliminary Research](#phase-2-preliminary-research) - Initial research and findings
+- [Phase 3: Deep Problem Solving](#phase-3-deep-problem-solving) - Detailed analysis and validation
+- [Phase 4: Final Checkpoint](#phase-4-final-checkpoint) - Present deliverable structure
+- [Phase 5: Deliverable Creation](#phase-5-deliverable-creation) - Build final output
+- [Phase 6: Next Steps & Resumability](#phase-6-next-steps--resumability) - Document next steps
+- [Process Files Structure](#process-files-structure) - How to organize work files
+- [Quality Considerations](#quality-considerations) - Self-review guidelines
+- [Time Expectations](#time-expectations) - Realistic timelines
+- [Resumability](#resumability) - How to save and resume work
+- [When to Recommend Enabling Agents](#when-to-recommend-enabling-agents) - Suggesting upgrades
+
+---
+
 ## When to Use This Workflow
 
 Use this workflow when:

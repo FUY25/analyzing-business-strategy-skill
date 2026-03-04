@@ -9,6 +9,29 @@
    - Follows slide standards: modular, visual, concise
    - Good for presentations and quick scanning
 
+---
+
+## Contents
+
+- [Slides vs Documents: Key Difference](#slides-vs-documents-key-difference) - When to use slides vs documents
+- [Slide Structure (Non-Linear, Modular)](#slide-structure-non-linear-modular) - How to structure slide content
+- [Content Density Standards](#content-density-standards) - How much content per slide
+- [Writing Style for Slides](#writing-style-for-slides) - Concise, visual, scannable
+- [Slide Count Targets](#slide-count-targets) - Expected slide counts by engagement length
+- [Format-Specific Guidance](#format-specific-guidance) - HTML vs PPTX considerations
+- [Reading from YAML Files](#reading-from-yaml-files) - How to extract content from process files
+- [BCG Patterns to Follow](#bcg-patterns-to-follow) - Consulting-style patterns
+- [Benchmarking Standards](#benchmarking-standards) - How to present benchmarks
+- [Sources & References Slide (Required)](#sources--references-slide-required) - Citation requirements
+- [Case Study Standards](#case-study-standards) - How to present case studies
+- [Quality Checklist (Pre-Delivery)](#quality-checklist-pre-delivery) - Final checks before delivery
+- [Common Mistakes to Avoid](#common-mistakes-to-avoid) - Pitfalls to watch for
+- [Deliverable Advisor Role](#deliverable-advisor-role) - Responsibilities and workflow
+- [Structure Proposal Template](#structure-proposal-template) - How to propose slide structure
+- [Final Note](#final-note) - Closing guidance
+
+---
+
 2. **Markdown document** (.md) — for depth and reading
    - Follows document standards: linear narrative, detailed analysis, full evidence
    - Good for reading, understanding depth, sharing with stakeholders who want detail

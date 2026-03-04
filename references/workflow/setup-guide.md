@@ -4,6 +4,17 @@ Practical setup for getting the business-expert skill fully operational. Organiz
 
 ---
 
+## Contents
+
+- [1. Agent Teams Setup](#1-agent-teams-setup) - Enable peer-to-peer agent communication
+- [2. Permission Configuration](#2-permission-configuration) - Allow web access and bash commands
+- [3. Required MCP Servers](#3-required-mcp-servers) - Essential MCPs for the skill
+- [4. Recommended Data MCPs](#4-recommended-data-mcps) - Domain-specific data sources
+- [5. Python Dependencies (API Fallback Scripts)](#5-python-dependencies-api-fallback-scripts) - Backup data access
+- [6. Troubleshooting](#6-troubleshooting) - Common issues and solutions
+
+---
+
 ## 1. Agent Teams Setup
 
 The skill works best with Claude Code's experimental Agent Teams feature, which enables peer-to-peer agent communication and shared task lists (e.g., a research agent and an analysis agent coordinating on a single deliverable).
